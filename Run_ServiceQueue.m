@@ -1,4 +1,4 @@
-%[text] # Run samples of the ServiceQueue simulation
+%[text] # Run samples of the ServiceQueue simulation John
 %[text] Collect statistics and plot histograms along the way.
 PictureFolder = "Pictures";
 mkdir(PictureFolder);
