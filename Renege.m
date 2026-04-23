@@ -5,22 +5,22 @@ classdef Renege < Event
     properties
         % ServerIndex - Index of the service station from which the
         % departure occurred
-        ServerIndex;
+        Id;
     end
     methods
-        function obj = Renege(Time, ServerIndex)
+        function obj = Renege(Time, Id)
             % Departure - Construct a departure event from a time and
             % server index.
             arguments
                 Time = 0.0;
-                ServerIndex = 0;
+                Id = 0;
             end
             
             % MATLAB-ism: This incantation is how to invoke the superclass
             % constructor.
             obj = obj@Event(Time);
 
-            obj.ServerIndex = ServerIndex;
+            obj.Id = Id;
         end
         function varargout = visit(obj, other)
             % visit - Call handle_departure
